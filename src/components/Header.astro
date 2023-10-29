@@ -2,22 +2,40 @@
 import Logo from "./Logo.astro";
 ---
 
-<header>
-  <nav class="flex flex-col items-center justify-center gap-5 pt-5">
-    <a href="">
-      <div class="flex items-center justify-center gap-3">
-        <div class="font-bold text-orange-600">McDermott</div>
-        <Logo />
-        <div class="font-bold text-green-800">Landscaping</div>
+<header class="">
+  <nav class="mx-auto flex w-full items-center justify-center px-4 py-10">
+    <ul
+      class="grid w-full max-w-6xl grid-cols-[1.25fr_0.5fr_1.25fr] gap-6 font-semibold 2xl:max-w-7xl 2xl:gap-12 2xl:text-lg"
+    >
+      <div class="grid grid-cols-3 gap-3 2xl:gap-6">
+        <li class="flex items-center justify-center">
+          <a href="" class="text-center">Our Story</a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a href="" class="text-center">Design&Install</a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a href="" class="text-center">Maintenance</a>
+        </li>
       </div>
-    </a>
-    <ul class="flex gap-5">
-      <li><a href="">Design&Construction</a></li>
-      <li><a href="">Garden Mentenance</a></li>
-      <li><a href="">Hard Landscaping</a></li>
-      <li><a href="">Soft Landscaping</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Contact us</a></li>
+
+      <li>
+        <a href="" class="flex items-center justify-center">
+          <Logo />
+        </a>
+      </li>
+
+      <div class="grid grid-cols-3 gap-8">
+        <li class="flex items-center justify-center">
+          <a href="" class="text-center">Softscaping</a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a href="" class="text-center">Hardscaping</a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a href="" class="text-center">Contact us</a>
+        </li>
+      </div>
     </ul>
   </nav>
 </header>
