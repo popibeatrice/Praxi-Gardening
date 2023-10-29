@@ -4,6 +4,8 @@ import "@fontsource/fira-sans/200.css";
 import "@fontsource/fira-sans/400.css";
 import "@fontsource/fira-sans/700.css";
 
+import Header from "../components/Header.astro";
+
 interface Props {
   title: string;
 }
@@ -28,6 +30,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-montserrat">
+    <Header />
     <slot />
   </body>
 </html>
