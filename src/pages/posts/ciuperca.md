@@ -1,4 +1,0 @@
----
-title: Ciuperca
----
-Demonica
