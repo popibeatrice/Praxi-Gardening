@@ -1,6 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Logo from "../components/Logo.astro";
 ---
 
 <Layout title="Welcome to Astro." />
+
+<script
+  is:inline
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  declare global {
+    interface Window {
+      netlifyIdentity: any;
+    }
+  }
+
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
