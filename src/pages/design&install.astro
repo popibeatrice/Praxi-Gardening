@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+// PHOTOS
+import construction1 from "../assets/construction1.jpg";
+import construction2 from "../assets/construction2.jpg";
+import design1 from "../assets/design1.jpg";
+import orangeFlower from "../assets/orange-flower.png";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="relative -z-10 mx-auto max-w-6xl px-4 2xl:max-w-7xl">
+    <div
+      class="flex min-h-[calc(100vh_-_100px)] flex-col items-center gap-12 pt-36 lg:flex-row lg:justify-center lg:gap-8 lg:pt-[125px]"
+    >
+      <h1
+        class="xs:text-5xl text-4xl font-bold text-orange-600 md:text-6xl lg:text-7xl xl:text-8xl"
+      >
+        Design
+        <span class="text-2xl font-medium lg:text-5xl">and</span>
+        <br /> Installation
+      </h1>
+      <div class="relative flex items-center justify-center">
+        <Image
+          src={construction2}
+          alt="woman plating a tree"
+          class="w-[80%] max-w-[400px] lg:max-w-sm xl:max-w-md 2xl:max-w-lg"
+        />
+        <Image
+          src={design1}
+          alt="sketch"
+          class="xs:-bottom-[70%] absolute -bottom-[80%] right-[40%] -z-10 max-w-xl lg:-bottom-[70%] xl:-bottom-[60%] 2xl:max-w-2xl"
+        />
+        <Image
+          src={orangeFlower}
+          alt="orange flower"
+          class="xs:w-[100px] absolute -top-[13%] right-0 w-[80px] -rotate-12 lg:w-[120px] 2xl:-top-[15%]"
+        />
+      </div>
+    </div>
+  </main>
+</Layout>
