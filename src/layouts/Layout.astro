@@ -5,6 +5,8 @@ import "@fontsource/fira-sans/400.css";
 import "@fontsource/fira-sans/700.css";
 
 import Header from "../components/Header.astro";
+import MobileHeader from "../components/MobileHeader";
+import Logo from "../components/Logo.astro";
 
 interface Props {
   title: string;
@@ -14,7 +16,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -29,8 +31,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="font-montserrat">
+  <body class="overflow-x-hidden font-montserrat">
     <Header />
+    <MobileHeader client:load><Logo /></MobileHeader>
     <slot />
   </body>
 </html>
