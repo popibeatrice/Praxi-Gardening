@@ -115,18 +115,19 @@ function MobileHeader({ children }) {
   useEffect(() => {
     const handleResize = (event) => {
       if (event.target.innerWidth > 1024) {
-        setIsOpen(false);
-        navRef.current.classList.add("hidden");
-      } else navRef.current.classList.remove("hidden");
+        if (isOpen === true) {
+          setIsOpen(false);
+          navRef.current.classList.add("hidden");
+        }
+      }
     };
 
     window.addEventListener("resize", handleResize);
 
     return () => {
-      console.log("unmounting");
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isOpen]);
 
   const toggleDialog = () => setIsOpen(!isOpen);
 
@@ -138,7 +139,7 @@ function MobileHeader({ children }) {
       <button
         type="button"
         onClick={toggleDialog}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-600 text-white min-[320px]:h-14 min-[320px]:w-14"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-600 text-white min-[400px]:h-14 min-[400px]:w-14"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -160,6 +161,7 @@ function MobileHeader({ children }) {
         {isOpen && (
           <Dialog
             ref={navRef}
+            as="div"
             static
             open={isOpen}
             className=""
@@ -170,7 +172,7 @@ function MobileHeader({ children }) {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="fixed inset-0 backdrop-blur-sm"
+              className="fixed inset-0 backdrop-blur-[3px]"
               aria-hidden="true"
             />
             <Dialog.Panel
