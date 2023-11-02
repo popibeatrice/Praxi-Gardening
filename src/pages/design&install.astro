@@ -7,15 +7,25 @@ import construction1 from "../assets/construction1.jpg";
 import construction2 from "../assets/construction2.jpg";
 import design1 from "../assets/design1.jpg";
 import orangeFlower from "../assets/orange-flower.png";
+
+import drawing from "../assets/sketch.png";
+import design from "../assets/technical-drawing.png";
+import garden from "../assets/gardening.png";
+
+import LongTitle from "../components/LongTitle.astro";
+import ShortTile from "../components/ShortTitle.astro";
+import Parag from "../components/Parag.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="relative -z-10 mx-auto max-w-6xl px-4 2xl:max-w-7xl">
-    <div
-      class="flex min-h-[calc(100vh_-_100px)] flex-col items-center gap-12 pt-36 lg:flex-row lg:justify-center lg:gap-8 lg:pt-[125px]"
+  <main
+    class="relative -z-10 mx-auto flex max-w-6xl flex-col justify-center overflow-x-hidden px-4 2xl:max-w-7xl"
+  >
+    <section
+      class="flex min-h-[calc(100vh_-_150px)] flex-col items-center gap-12 pt-44 lg:min-h-[calc(100vh_-_200px)] lg:flex-row lg:justify-center lg:gap-8 lg:pt-[125px]"
     >
       <h1
-        class="xs:text-5xl text-4xl font-bold text-orange-600 md:text-6xl lg:text-7xl xl:text-8xl"
+        class="text-4xl font-bold text-orange-600 xs:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
       >
         Design
         <span class="text-2xl font-medium lg:text-5xl">and</span>
@@ -30,14 +40,93 @@ import orangeFlower from "../assets/orange-flower.png";
         <Image
           src={design1}
           alt="sketch"
-          class="xs:-bottom-[70%] absolute -bottom-[80%] right-[40%] -z-10 max-w-xl lg:-bottom-[70%] xl:-bottom-[60%] 2xl:max-w-2xl"
+          class="absolute -bottom-[80%] right-[40%] -z-10 hidden max-w-xl xs:-bottom-[70%] lg:-bottom-[70%] lg:block xl:-bottom-[60%] 2xl:max-w-2xl"
         />
         <Image
           src={orangeFlower}
           alt="orange flower"
-          class="xs:w-[100px] absolute -top-[13%] right-0 w-[80px] -rotate-12 lg:w-[120px] 2xl:-top-[15%]"
+          class="absolute -top-[13%] right-0 w-[80px] -rotate-12 xs:w-[100px] lg:w-[120px] 2xl:-top-[15%]"
         />
       </div>
-    </div>
+    </section>
+    <section
+      class="my-[150px] flex flex-col items-center gap-16 md:justify-center lg:mb-[50px] lg:mt-[225px] lg:min-h-[80vh] xl:mt-[250px]"
+    >
+      <LongTitle>Why McDermott's design?</LongTitle>
+      <div class="flex flex-col items-center justify-center gap-5">
+        <ShortTile>Our Expertise</ShortTile>
+        <div
+          class="mx-auto grid w-full max-w-[375px] grid-cols-1 justify-items-center sm:max-w-[425px] md:max-w-[725px] md:grid-cols-2 md:items-center lg:max-w-[925px]"
+        >
+          <Parag>
+            McDermott's design stands out for its unwavering commitment to
+            excellence in computer-aided designs (CAD), available upon request.
+            With a focus on landscaping and outdoor planning, we offer versatile
+            services, that suit both enthusiasts and those seeking a hassle-free
+            experience. Our dedication to expertise and comprehensive project
+            insurance ensures your peace of mind throughout every project.
+          </Parag>
+        </div>
+      </div>
+    </section>
+    <section class="flex min-h-screen items-center justify-center">
+      <div class="flex w-[90%] flex-col items-center gap-16">
+        <LongTitle>What can we offer?</LongTitle>
+        <div class="flex w-full justify-start">
+          <div class="flex flex-col items-start gap-3">
+            <div class="flex items-center justify-center gap-4">
+              <Image src={drawing} alt="drawing icon" class="w-14 md:w-20" />
+              <h3 class="text-3xl font-medium md:text-4xl lg:text-5xl">
+                Drawings
+              </h3>
+            </div>
+            <p class="lg:max-w-lg">
+              Elevate your outdoor projects with our specialized drawing
+              services. We create precise plans for landscaping and outdoor
+              areas, custom-tailored for planning applications. Let us bring
+              your outdoor vision to life with our professional, expertly
+              crafted drawings.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex w-full justify-end">
+          <div class="flex flex-col items-start gap-3">
+            <div class="flex items-center justify-center gap-4">
+              <Image src={design} alt="design icon" class="w-14 md:w-[90px]" />
+              <h3 class="text-3xl font-medium md:text-4xl lg:text-5xl">
+                Garden Design
+              </h3>
+            </div>
+            <p class="lg:max-w-lg">
+              For clients eager to craft their own garden oasis, our
+              self-designed garden service is your ideal choice. We offer
+              comprehensive site surveys and consultations, or, if you prefer,
+              we can provide you with vivid, precisely scaled garden designs in
+              full color to inspire your DIY project.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex w-full justify-start">
+          <div class="flex flex-col items-start gap-3">
+            <div class="flex items-center justify-center gap-4">
+              <Image src={garden} alt="orange flower" class="w-14 md:w-20" />
+              <h3 class="text-3xl font-medium md:text-4xl lg:text-5xl">
+                Design & Build Service
+              </h3>
+            </div>
+            <p class="lg:max-w-lg">
+              And for those who are less green-fingered, our Turnkey Landscaping
+              Services are able to transform your vision into reality. We
+              initiate the process with a thorough site survey and client
+              consultation, delving into your unique requirements. Once the
+              design is perfected and given the green light, we swiftly prepare
+              a construction quote.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
