@@ -1,0 +1,17 @@
+---
+import ShortTitle from "./ShortTitle.astro";
+import LongTitle from "./LongTitle.astro";
+const { title, subTitle } = Astro.props;
+---
+
+<section class="flex min-h-[65vh] flex-col items-center justify-center gap-8">
+  <div class="items flex flex-col items-center gap-1">
+    <ShortTitle>{title}</ShortTitle>
+    <LongTitle>{subTitle}</LongTitle>
+  </div>
+  <div
+    class="mx-auto grid w-full max-w-[375px] grid-cols-1 justify-items-center sm:max-w-[425px] md:max-w-[725px] md:grid-cols-2 md:items-center lg:max-w-[925px]"
+  >
+    <slot />
+  </div>
+</section>

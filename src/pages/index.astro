@@ -1,37 +1,78 @@
 ---
 import LandHero from "../components/LandHero.astro";
+import LandPoint from "../components/LandPoint.astro";
 import Layout from "../layouts/Layout.astro";
+import Parag from "../components/Parag.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="relative -z-10 mx-auto max-w-6xl px-4 2xl:max-w-7xl">
+  <main
+    class="relative -z-10 mx-auto flex max-w-6xl flex-col gap-20 px-4 2xl:max-w-7xl"
+  >
     <LandHero />
-    <section class="">
-      <div class="items flex flex-col">
-        <span class="">Our Story</span>
-        <h3 class=""></h3>
-      </div>
-    </section>
-  </main>
-</Layout>
+    <div class="flex flex-col items-center gap-20">
+      <LandPoint title="Why Us" subTitle="Quality of Craftsmanship">
+        <Parag
+          class="col-span-2 min-[325px]:text-lg md:text-center lg:text-xl 2xl:text-2xl"
+        >
+          At <span class="font-semibold">McDermott Landscaping</span>, we offer
+          our customers a comprehensive range of services to create bespoke and
+          <span class="font-semibold">elegant gardens</span>. Our pride lies in
+          the exceptional quality of our craftsmanship, ensuring minimal
+          disturbance to you during our work. We possess expertise in all
+          aspects of <span class="font-semibold">computer-aided designs</span>
+           (CAD), available upon request, tailored to meet your specific needs.
+          As fully insured and highly experienced landscape professionals with <span
+            class="font-semibold">over 20 years of expertise</span
+          > in landscaping design and construction, we guarantee a seamless,
+          professional experience from concept to completion.
+        </Parag>
+      </LandPoint>
+      <LandPoint title="Our Story" subTitle="Family and Landscaping">
+        <Parag
+          class="col-span-2 min-[325px]:text-lg md:text-center lg:text-xl 2xl:text-2xl"
+        >
+          <span
+            class="font-bold text-orange-600 min-[325px]:text-2xl lg:text-3xl 2xl:text-4xl"
+            >Hello!</span
+          > My name is <span class="font-semibold">Connor McDermott</span>, and
+          in the 1990s, I embarked on my landscaping journey right after
+          finishing college. After gaining valuable experience with one of <span
+            class="font-semibold">Ireland's top landscaping companies</span
+          >, my wife and I used our expertise to establish McDermott
+          Landscaping. Today, McDermott Landscaping stands proudly as a <span
+            class="font-semibold">market leader</span
+          > , renowned for our quality work and exceptional service in <span
+            class="font-semibold">Westmeath</span
+          >
+           and the greater Leinster area. We offer a comprehensive range of
+          services, ensuring a seamless experience for our clients. With us, you
+          have a <span class="font-semibold">single point of contact</span>
+           throughout the entire project, allowing us to bring your vision to
+          life with professionalism and warmth.
+        </Parag>
+      </LandPoint>
+    </div>
 
-<script
-  is:inline
-  src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  declare global {
-    interface Window {
-      netlifyIdentity: any;
-    }
-  }
+    <script
+      is:inline
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      declare global {
+        interface Window {
+          netlifyIdentity: any;
+        }
+      }
 
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
+    </script>
+  </main>
+</Layout>

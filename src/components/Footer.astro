@@ -1,0 +1,26 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<footer
+  class="flex min-h-[300px] items-start justify-center bg-neutral-900 py-8 text-white"
+>
+  <div class="grid w-[80%] max-w-5xl grid-cols-1 gap-5 lg:grid-cols-2">
+    <div class="flex flex-col items-start justify-start gap-1">
+      <div class="flex items-center justify-start gap-2">
+        <Logo />
+        <span class="text-xl font-bold">McDermott <br /> Landscaping</span>
+      </div>
+      <p class="text-sm text-white" id="reserved"></p>
+    </div>
+    <div></div>
+  </div>
+</footer>
+
+<script>
+  const date = new Date();
+  const year = date.getFullYear();
+  document.getElementById(
+    "reserved",
+  ).innerHTML = `&copy; ${year} All rights reserved`;
+</script>
