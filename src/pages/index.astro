@@ -1,47 +1,15 @@
 ---
+import LandHero from "../components/LandHero.astro";
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import LandingImage from "../assets/landFlower.jpg";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="relative -z-10 mx-auto max-w-6xl px-4 2xl:max-w-7xl">
-    <section class="flex min-h-screen items-center justify-center pt-[100px]">
-      <div
-        class="mx-auto grid w-full max-w-[325px] grid-cols-1 justify-items-center gap-8 sm:max-w-[400px] lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-4"
-      >
-        <div
-          class="relative isolate grid w-full max-w-[350x] grid-cols-1 gap-8 sm:max-w-[400px] lg:order-2 xl:max-w-[475px] 2xl:max-w-lg"
-        >
-          <h1
-            class="-left-8 top-12 block text-center font-fira-sans text-4xl font-light min-[425px]:absolute min-[425px]:bg-neutral-800 min-[425px]:px-3 min-[425px]:py-1.5 min-[425px]:text-5xl min-[425px]:font-normal min-[425px]:text-orange-600 min-[425px]:text-white sm:text-6xl"
-          >
-            McDermott <br />
-            <span class="font-medium text-green-800 min-[425px]:hidden"
-              >Landscaping</span
-            >
-          </h1>
-          <Image
-            src={LandingImage}
-            quality="mid"
-            class="mx-auto w-[90%] rounded-sm shadow-lg shadow-neutral-600"
-            loading="eager"
-            alt="orange flower"
-          />
-          <h2
-            class="absolute -right-8 bottom-12 hidden bg-neutral-800 px-3 py-1.5 font-fira-sans text-5xl font-normal text-white min-[425px]:block sm:text-6xl"
-          >
-            Landscaping
-          </h2>
-        </div>
-        <p
-          class="hyphens-auto text-center text-lg min-[300px]:text-xl min-[450px]:text-2xl sm:text-3xl lg:order-1 lg:text-4xl 2xl:text-5xl"
-        >
-          <span class="font-semibold text-orange-600">Garden Dreams</span>
-          <br /> to <span class="font-semibold text-green-800"
-            >Vibrant Realities</span
-          >
-        </p>
+    <LandHero />
+    <section class="">
+      <div>
+        <span>Our Story</span>
+        <h3 class=""></h3>
       </div>
     </section>
   </main>

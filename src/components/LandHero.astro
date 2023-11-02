@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import LandingImage from "../assets/landFlower.jpg";
+---
+
+<section class="flex min-h-screen items-center justify-center pb-4 pt-[125px]">
+  <div
+    class="mx-auto grid w-full max-w-[325px] grid-cols-1 justify-items-center gap-8 sm:max-w-[400px] md:max-w-none md:grid-cols-2 md:items-center md:gap-4"
+  >
+    <div
+      class="relative isolate grid w-full max-w-[350px] grid-cols-1 gap-8 min-[425px]:order-2 sm:max-w-[400px] xl:max-w-[475px] 2xl:max-w-lg"
+    >
+      <h1
+        class="-left-8 top-12 block text-center font-fira-sans text-4xl font-light min-[425px]:absolute min-[425px]:bg-neutral-800 min-[425px]:px-3 min-[425px]:py-1.5 min-[425px]:text-5xl min-[425px]:font-normal min-[425px]:text-white lg:text-6xl"
+      >
+        McDermott <br />
+        <span class="font-medium text-green-800 min-[425px]:hidden"
+          >Landscaping</span
+        >
+      </h1>
+      <Image
+        src={LandingImage}
+        quality="mid"
+        class="mx-auto w-[90%] rounded-sm shadow-lg shadow-neutral-600"
+        loading="eager"
+        alt="orange flower"
+      />
+      <h2
+        class="absolute -right-1 bottom-12 hidden bg-neutral-800 px-3 py-1.5 font-fira-sans text-5xl font-normal text-white min-[425px]:block lg:text-6xl"
+      >
+        Landscaping
+      </h2>
+    </div>
+    <p
+      class="hyphens-auto text-center text-lg min-[300px]:text-xl min-[425px]:order-1 min-[450px]:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl"
+    >
+      <span
+        class="text-3xl font-semibold text-orange-600 min-[350px]:text-4xl min-[425px]:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+        >Garden <br /> Dreams</span
+      >
+      <br /> to <span
+        class="text-3xl font-semibold text-green-800 min-[350px]:text-4xl min-[425px]:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+        >Vibrant <br /> Realities</span
+      >
+    </p>
+  </div>
+</section>
