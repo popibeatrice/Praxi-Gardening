@@ -4,10 +4,6 @@ import { useState, useEffect, useRef } from "react";
 
 const links = [
   {
-    name: "Our Story",
-    href: "/",
-  },
-  {
     name: "Design&Install",
     href: "/about",
   },
@@ -21,10 +17,6 @@ const links = [
   },
   {
     name: "Hardscaping",
-    href: "/contact",
-  },
-  {
-    name: "Contact Us",
     href: "/contact",
   },
 ];
@@ -181,7 +173,7 @@ function MobileHeader({ children }) {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="fixed right-0 top-0 flex h-screen w-full flex-col items-center justify-start gap-20 overflow-y-auto overflow-x-hidden bg-orange-600 px-4 pt-[100px] text-white min-[400px]:max-w-[275px] min-[400px]:px-6 sm:max-w-[325px] md:max-w-[400px]"
+              className="fixed right-0 top-0 flex h-screen w-full flex-col items-center justify-start gap-[calc(80px_+_10vh)] overflow-y-auto overflow-x-hidden bg-orange-600 px-4 pt-[100px] text-white min-[400px]:max-w-[275px] min-[400px]:px-6 sm:max-w-[325px] md:max-w-[400px]"
             >
               <button
                 type="button"
@@ -226,19 +218,13 @@ function MobileHeader({ children }) {
                   className="absolute -bottom-0.5 left-1/2 h-[1.5px] w-[60%] -translate-x-1/2 rounded bg-white sm:h-[1.75px]"
                 ></motion.div>
               </motion.div>
-              <nav
-                variants={container}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                className="mb-14 flex items-center min-[400px]:ml-2 min-[400px]:self-start"
-              >
+              <nav className="mb-14 flex items-center justify-center min-[400px]:ml-2 min-[400px]:self-start">
                 <motion.ul
                   variants={container}
                   initial="hidden"
                   animate="visible"
                   exit="hidden"
-                  className="flex flex-col items-center gap-5 min-[400px]:items-start sm:gap-6 md:gap-8"
+                  className="flex flex-col items-center justify-center gap-5 min-[400px]:items-start sm:gap-6 md:gap-8"
                 >
                   {links.map((link, index) => (
                     <motion.li variants={linky} key={link.name}>
