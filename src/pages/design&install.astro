@@ -25,7 +25,7 @@ import Parag from "../components/Parag.astro";
       class="flex min-h-[calc(100vh_-_150px)] flex-col items-center gap-12 pt-44 lg:min-h-[calc(100vh_-_200px)] lg:flex-row lg:justify-center lg:gap-8 lg:pt-[125px]"
     >
       <h1
-        class="text-4xl font-bold text-orange-600 xs:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+        class="xs:text-5xl text-4xl font-bold text-orange-600 md:text-6xl lg:text-7xl xl:text-8xl"
       >
         Design
         <span class="text-2xl font-medium lg:text-5xl">and</span>
@@ -40,12 +40,12 @@ import Parag from "../components/Parag.astro";
         <Image
           src={design1}
           alt="sketch"
-          class="absolute -bottom-[80%] right-[40%] -z-10 hidden max-w-xl xs:-bottom-[70%] lg:-bottom-[70%] lg:block xl:-bottom-[60%] 2xl:max-w-2xl"
+          class="xs:-bottom-[70%] absolute -bottom-[80%] right-[40%] -z-10 hidden max-w-xl lg:-bottom-[70%] lg:block xl:-bottom-[60%] 2xl:max-w-2xl"
         />
         <Image
           src={orangeFlower}
           alt="orange flower"
-          class="absolute -top-[13%] right-0 w-[80px] -rotate-12 xs:w-[100px] lg:w-[120px] 2xl:-top-[15%]"
+          class="xs:w-[100px] absolute -top-[13%] right-0 w-[80px] -rotate-12 lg:w-[120px] 2xl:-top-[15%]"
         />
       </div>
     </section>
@@ -70,7 +70,9 @@ import Parag from "../components/Parag.astro";
       </div>
     </section>
     <section class="flex min-h-screen items-center justify-center">
-      <div class="flex w-[90%] flex-col items-center gap-16">
+      <div
+        class="flex w-[90%] flex-col items-center gap-16 lg:gap-20 2xl:gap-28"
+      >
         <LongTitle>What can we offer?</LongTitle>
         <div class="flex w-full justify-start">
           <div class="flex flex-col items-start gap-3">
@@ -80,7 +82,7 @@ import Parag from "../components/Parag.astro";
                 Drawings
               </h3>
             </div>
-            <p class="lg:max-w-lg">
+            <p class="min-[325px]:text-lg lg:max-w-xl lg:text-xl 2xl:text-2xl">
               Elevate your outdoor projects with our specialized drawing
               services. We create precise plans for landscaping and outdoor
               areas, custom-tailored for planning applications. Let us bring
@@ -98,7 +100,7 @@ import Parag from "../components/Parag.astro";
                 Garden Design
               </h3>
             </div>
-            <p class="lg:max-w-lg">
+            <p class="min-[325px]:text-lg lg:max-w-xl lg:text-xl 2xl:text-2xl">
               For clients eager to craft their own garden oasis, our
               self-designed garden service is your ideal choice. We offer
               comprehensive site surveys and consultations, or, if you prefer,
@@ -116,7 +118,7 @@ import Parag from "../components/Parag.astro";
                 Design & Build Service
               </h3>
             </div>
-            <p class="lg:max-w-lg">
+            <p class="min-[325px]:text-lg lg:max-w-xl lg:text-xl 2xl:text-2xl">
               And for those who are less green-fingered, our Turnkey Landscaping
               Services are able to transform your vision into reality. We
               initiate the process with a thorough site survey and client

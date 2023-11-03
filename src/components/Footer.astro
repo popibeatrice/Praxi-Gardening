@@ -1,19 +1,94 @@
 ---
 import Logo from "./Logo.astro";
+
+import { Image } from "astro:assets";
+
+import telIco from "../assets/phone-call.svg";
+import emailIco from "../assets/envelope.svg";
+import locationIco from "../assets/marker.svg";
+import calendarIco from "../assets/calendar.svg";
+
+import facebookIco from "../assets/facebook.svg";
+import linkedinIco from "../assets/linkedin.svg";
+
+const info = [
+  {
+    icon: telIco,
+    text: "086 816 8479",
+  },
+  {
+    icon: emailIco,
+    text: "connor@mcdermottlandscaping.ie",
+  },
+  {
+    icon: locationIco,
+    text: "Kinnegad Co. Westmeath",
+  },
+  {
+    icon: calendarIco,
+    text: "Mon - Fri: 8:00 - 18:00",
+  },
+];
+
+const socials = [
+  {
+    icon: facebookIco,
+    text: "Facebook",
+    link: "https://www.facebook.com/mcdermottlandscaping/",
+  },
+  {
+    icon: linkedinIco,
+    text: "LinkedIn",
+    link: "https://www.linkedin.com/in/connor-mc-dermott-1b6b9066/?originalSubdomain=ie",
+  },
+];
 ---
 
 <footer
-  class="flex min-h-[300px] items-start justify-center bg-neutral-900 py-8 text-white"
+  class="mt-10 flex min-h-[300px] flex-col items-center justify-center gap-10 bg-neutral-900 py-20 text-white"
 >
-  <div class="grid w-[80%] max-w-5xl grid-cols-1 gap-5 lg:grid-cols-2">
-    <div class="flex flex-col items-start justify-start gap-1">
-      <div class="flex items-center justify-start gap-2">
-        <Logo />
-        <span class="text-xl font-bold">McDermott <br /> Landscaping</span>
-      </div>
-      <p class="text-sm text-white" id="reserved"></p>
+  <div class="flex flex-col items-center justify-center gap-1 self-center">
+    <div class="flex items-center justify-center gap-2">
+      <Logo />
+      <span class="text-2xl font-bold lg:text-3xl"
+        >McDermott <br /> Landscaping</span
+      >
     </div>
-    <div></div>
+    <p class="text-sm text-white" id="reserved"></p>
+  </div>
+  <div
+    class="mx-auto grid w-[80%] max-w-5xl grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-2"
+  >
+    <div
+      class="flex w-full flex-col items-start justify-start gap-5 md:items-center"
+    >
+      <span class="text-2xl font-bold lg:text-3xl">Info:</span>
+      {
+        info.map((el) => (
+          <div class="ml-5 flex items-center justify-center gap-2 md:ml-0">
+            <Image alt="Info Icon" src={el.icon} class="w-6 invert" />
+            <span class="break-all font-medium">{el.text}</span>
+          </div>
+        ))
+      }
+    </div>
+    <div
+      class="flex w-full flex-col items-start justify-start gap-5 md:items-center"
+    >
+      <span class="text-2xl font-bold lg:text-3xl">Follow us:</span>
+      {
+        socials.map((el) => (
+          <a
+            href={el.link}
+            target="_blank"
+            class="ml-5 flex items-center justify-start gap-2 md:ml-0"
+          >
+            <Image alt="Info Icon" src={el.icon} class="w-6 invert" />
+            <span class="font-medium">{el.text}</span>
+          </a>
+        ))
+      }
+    </div>
   </div>
 </footer>
 
