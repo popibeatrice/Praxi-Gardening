@@ -10,6 +10,7 @@ import Header from "../components/Header.astro";
 import MobileHeader from "../components/MobileHeader";
 import Logo from "../components/Logo.astro";
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 import { Image } from "astro:assets";
 import leafImg from "../assets/frunze.png";
@@ -36,6 +37,7 @@ const { title } = Astro.props;
     <meta name="theme-color" content="#ffffff" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class="overflow-x-hidden font-montserrat">
     <Image

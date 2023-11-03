@@ -12,12 +12,20 @@ const links = [
     href: "/portfolio",
   },
   {
+    name: "Gallery",
+    href: "/photos",
+  },
+  {
     name: "Softscaping",
     href: "/contact",
   },
   {
     name: "Hardscaping",
     href: "/contact",
+  },
+  {
+    name: "Contact",
+    href: "/contactform",
   },
 ];
 
@@ -173,7 +181,7 @@ function MobileHeader({ children }) {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="fixed right-0 top-0 z-50 flex h-screen w-full flex-col items-center justify-start gap-[calc(80px_+_10vh)] overflow-y-auto overflow-x-hidden bg-orange-600 px-4 pt-[100px] text-white min-[400px]:max-w-[275px] min-[400px]:px-6 sm:max-w-[325px] md:max-w-[400px]"
+              className="fixed right-0 top-0 z-50 flex h-screen w-full flex-col items-center justify-start gap-[calc(60px_+_5vh)] overflow-y-auto overflow-x-hidden bg-orange-600 px-4 pt-[100px] text-white min-[400px]:max-w-[275px] min-[400px]:px-6 sm:max-w-[325px] md:max-w-[400px]"
             >
               <button
                 type="button"

@@ -12,7 +12,7 @@ const { allImgs } = Astro.props;
             src={img.default}
             quality="mid"
             alt="Imagine portofoliu"
-            class="hover:border-accentBlue max-w-full rounded-lg border-2 border-white transition-all duration-1000 hover:scale-105"
+            class="w-full rounded-lg border-2 border-white transition-all duration-1000 hover:scale-105"
           />
         </a>
       );
@@ -34,8 +34,7 @@ const { allImgs } = Astro.props;
   .containery {
     columns: 1;
     column-gap: 20px;
-    width: 100%;
-    @apply mx-auto;
+    @apply mx-auto w-full max-w-[400px] min-[325px]:w-[90%] min-[375px]:max-w-[450px] min-[864px]:w-full min-[864px]:max-w-none;
   }
   .box {
     width: 100%;
