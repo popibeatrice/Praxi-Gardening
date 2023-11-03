@@ -7,12 +7,12 @@ const { allImgs } = Astro.props;
   {
     allImgs.map((img) => {
       return (
-        <a data-fslightbox href={img.default.src} class="box block">
+        <a data-fslightbox href={img.default.src} class="box block max-w-md">
           <Image
             src={img.default}
             quality="mid"
             alt="Imagine portofoliu"
-            class="w-full rounded-lg border-2 border-white transition-all duration-1000 hover:scale-105"
+            class="w-full rounded-lg border-2 border-white transition-all duration-500 hover:scale-105 hover:border-orange-600"
           />
         </a>
       );
@@ -34,7 +34,7 @@ const { allImgs } = Astro.props;
   .containery {
     columns: 1;
     column-gap: 20px;
-    @apply mx-auto w-full max-w-[400px] min-[325px]:w-[90%] min-[375px]:max-w-[450px] min-[864px]:w-full min-[864px]:max-w-none;
+    @apply mx-auto;
   }
   .box {
     width: 100%;
