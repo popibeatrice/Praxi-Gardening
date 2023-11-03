@@ -37,10 +37,10 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="font-montserrat overflow-x-hidden">
+  <body class="overflow-x-hidden font-montserrat">
     <Image
       src={leafImg}
-      class="fixed -bottom-10 -left-10 z-[10] w-48 blur-[2px] min-[325px]:-bottom-8 min-[325px]:-left-8 sm:w-60 lg:w-64 lg:blur-[3px] 2xl:-bottom-6 2xl:-left-6 2xl:w-80"
+      class="pointer-events-none fixed -bottom-8 -left-8 z-[10] w-40 blur-[1.5px] min-[325px]:-bottom-6 min-[325px]:-left-6 sm:w-44 lg:w-52 lg:blur-[2px] 2xl:-bottom-4 2xl:-left-4 2xl:w-56"
       alt="Leaf"
     />
     <slot />
