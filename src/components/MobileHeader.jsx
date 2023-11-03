@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 const links = [
   {
     name: "Design&Install",
-    href: "/about",
+    href: "/design&install",
   },
   {
     name: "Maintenance",
@@ -125,7 +125,7 @@ function MobileHeader({ children }) {
 
   return (
     <header className="fixed top-0 flex w-screen items-center justify-between px-4 py-6 min-[400px]:px-6 lg:hidden">
-      <a href="" className="flex items-center justify-center">
+      <a href="/" className="flex items-center justify-center">
         {children}
       </a>
       <button
