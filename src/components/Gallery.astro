@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+const { allImgs } = Astro.props;
+---
+
+<section class="containery py-8">
+  {
+    allImgs.map((img) => {
+      return (
+        <a data-fslightbox href={img.default.src} class="box block">
+          <Image
+            src={img.default}
+            quality="mid"
+            alt="Imagine portofoliu"
+            class="hover:border-accentBlue max-w-full rounded-lg border-2 border-white transition-all duration-1000 hover:scale-105"
+          />
+        </a>
+      );
+    })
+  }
+</section>
+
+<script src="fslightbox.js" is:inline></script>
+
+<style>
+  .line {
+    background-image: radial-gradient(
+      circle,
+      rgb(245 237 223) 28%,
+      rgb(38 38 38)
+    );
+  }
+
+  .containery {
+    columns: 1;
+    column-gap: 20px;
+    width: 100%;
+    @apply mx-auto;
+  }
+  .box {
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 864px) {
+    .containery {
+      columns: 2;
+    }
+  }
+  @media (min-width: 1536px) {
+    .containery {
+      columns: 3;
+    }
+  }
+</style>
