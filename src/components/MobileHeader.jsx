@@ -17,11 +17,11 @@ const links = [
   },
   {
     name: "Softscaping",
-    href: "/contact",
+    href: "/softscaping",
   },
   {
     name: "Hardscaping",
-    href: "/contact",
+    href: "/hardscaping",
   },
   {
     name: "Contact",
