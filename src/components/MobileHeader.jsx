@@ -208,7 +208,7 @@ function MobileHeader({ children }) {
               <motion.div className="relative">
                 <motion.div className="overflow-hidden">
                   <Dialog.Title
-                    as={motion.h3}
+                    as={motion.span}
                     variants={title}
                     initial="hidden"
                     animate="visible"

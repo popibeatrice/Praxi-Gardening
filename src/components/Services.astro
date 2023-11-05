@@ -1,0 +1,98 @@
+---
+import gazeboImg from "../assets/paving.png";
+import grassImg from "../assets/grass.png";
+import grassCutterImg from "../assets/lawnmower.png";
+import planImg from "../assets/planning.png";
+
+import NavigateButton from "./NavigateButton.astro";
+
+import { Image } from "astro:assets";
+
+const services = [
+  {
+    title: "Design&Installation",
+    img: planImg,
+    alt: "Design and Installation",
+    link: "/design&install",
+  },
+  {
+    title: "Maintenance",
+    img: grassCutterImg,
+    alt: "Maintenance",
+    link: "/maintenance",
+  },
+  {
+    title: "Softscaping",
+    img: grassImg,
+    alt: "Softscaping",
+    link: "/softscaping",
+  },
+  {
+    title: "Hardscaping",
+    img: gazeboImg,
+    alt: "Hardscaping",
+    link: "/hardscaping",
+  },
+];
+---
+
+<section
+  class="mx-auto grid min-h-screen w-full max-w-[325px] grid-cols-1 justify-items-center gap-8 sm:max-w-[400px] md:max-w-none md:items-center md:gap-4 lg:grid-cols-[0.85fr_1.15fr]"
+>
+  <div class="flex flex-col items-center justify-center gap-10">
+    <h3
+      class="text-center font-fira-sans text-4xl font-bold uppercase min-[375px]:text-5xl lg:text-start lg:text-6xl"
+    >
+      Learn More <br /> About Our <br />
+      <span class="text-orange-600">Services</span>
+    </h3>
+    <span class="hidden text-3xl font-bold lg:block">or</span>
+    <div class="hidden lg:block">
+      <NavigateButton link="/contactform">Contact Us</NavigateButton>
+    </div>
+  </div>
+  <div class="grid w-full max-w-2xl grid-cols-1 gap-2 md:grid-cols-2">
+    {
+      services.map((el, index) => (
+        <a
+          href={el.link}
+          class="group flex h-[400px] flex-col items-center justify-center overflow-hidden rounded-sm border-4 transition-all duration-500 hover:border-black"
+        >
+          <div class="flex h-[80%] w-full flex-col items-center justify-center gap-5 p-4">
+            <div class="order-2 flex h-28 w-28 items-center justify-center transition-all duration-500 group-hover:scale-110">
+              <Image alt={el.alt} src={el.img} class=" w-full drop-shadow-md" />
+            </div>
+            <h4 class="order-1 text-center text-2xl font-bold">
+              {index === 0 ? (
+                <span>
+                  Design <br /> & <br /> Installation
+                </span>
+              ) : (
+                el.title
+              )}
+            </h4>
+          </div>
+          <div class="relative flex flex-col items-center justify-center transition-all duration-500 group-hover:-translate-y-0 lg:translate-y-[150%]">
+            <span class="font-bold text-orange-600 transition-all duration-500">
+              Take me there!
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</section>
