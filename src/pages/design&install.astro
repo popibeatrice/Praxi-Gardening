@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 // PHOTOS
-import construction1 from "../assets/construction1.jpg";
 import construction2 from "../assets/construction2.jpg";
 import design1 from "../assets/design1.jpg";
 import orangeFlower from "../assets/orange-flower.png";
@@ -15,11 +14,12 @@ import garden from "../assets/gardening.png";
 import LongTitle from "../components/LongTitle.astro";
 import ShortTile from "../components/ShortTitle.astro";
 import Parag from "../components/Parag.astro";
+import NavigateButton from "../components/NavigateButton.astro";
 ---
 
 <Layout title="McDermott Landscaping | Design&Install">
   <main
-    class="relative -z-10 mx-auto flex max-w-6xl flex-col justify-center overflow-x-hidden px-4 2xl:max-w-7xl"
+    class="relative mx-auto flex max-w-6xl flex-col justify-center overflow-x-hidden px-4 2xl:max-w-7xl"
   >
     <section
       class="flex min-h-[calc(100vh_-_150px)] flex-col items-center gap-12 pt-44 lg:min-h-[calc(100vh_-_200px)] lg:flex-row lg:justify-center lg:gap-8 lg:pt-[125px]"
@@ -35,22 +35,25 @@ import Parag from "../components/Parag.astro";
         <Image
           src={construction2}
           alt="woman plating a tree"
+          loading="eager"
           class="w-[80%] max-w-[400px] lg:max-w-sm xl:max-w-md 2xl:max-w-lg"
         />
         <Image
           src={design1}
           alt="sketch"
+          loading="eager"
           class="absolute -bottom-[80%] right-[40%] -z-10 hidden max-w-xl xs:-bottom-[70%] lg:-bottom-[70%] lg:block xl:-bottom-[60%] 2xl:max-w-2xl"
         />
         <Image
           src={orangeFlower}
           alt="orange flower"
+          loading="eager"
           class="absolute -top-[13%] right-0 w-[80px] -rotate-12 xs:w-[100px] lg:w-[120px] 2xl:-top-[15%]"
         />
       </div>
     </section>
     <section
-      class="my-[150px] flex flex-col items-center gap-16 md:justify-center lg:mb-[50px] lg:mt-[225px] lg:min-h-[80vh] xl:mt-[250px]"
+      class="ascuns my-[150px] flex flex-col items-center gap-16 md:justify-center lg:mb-[50px] lg:mt-[225px] lg:min-h-[80vh] xl:mt-[250px]"
     >
       <LongTitle>Why McDermott's design?</LongTitle>
       <div class="flex flex-col items-center justify-center gap-5">
@@ -60,11 +63,14 @@ import Parag from "../components/Parag.astro";
         >
           <Parag>
             McDermott's design stands out for its unwavering commitment to
-            excellence in computer-aided designs (CAD), available upon request.
-            With a focus on landscaping and outdoor planning, we offer versatile
-            services, that suit both enthusiasts and those seeking a hassle-free
-            experience. Our dedication to expertise and comprehensive project
-            insurance ensures your peace of mind throughout every project.
+            excellence in <span class="font-semibold"
+              >computer-aided designs</span
+            > (CAD), available upon request. With a focus on landscaping and
+            outdoor planning, we offer versatile services, that suit both
+            enthusiasts and those seeking a <span class="font-semibold"
+              >hassle-free experience</span
+            >. Our dedication to expertise and comprehensive project insurance
+            ensures your peace of mind throughout every project.
           </Parag>
         </div>
       </div>
@@ -74,7 +80,7 @@ import Parag from "../components/Parag.astro";
         class="flex w-[90%] flex-col items-center gap-16 lg:gap-20 2xl:gap-28"
       >
         <LongTitle>What can we offer?</LongTitle>
-        <div class="flex w-full justify-start">
+        <div class="ascuns flex w-full justify-start">
           <div class="flex flex-col items-start gap-3">
             <div class="flex items-center justify-center gap-4">
               <Image src={drawing} alt="drawing icon" class="w-14 md:w-20" />
@@ -92,7 +98,7 @@ import Parag from "../components/Parag.astro";
           </div>
         </div>
 
-        <div class="flex w-full justify-end">
+        <div class="ascuns flex w-full justify-end">
           <div class="flex flex-col items-start gap-3">
             <div class="flex items-center justify-center gap-4">
               <Image src={design} alt="design icon" class="w-14 md:w-[90px]" />
@@ -110,7 +116,7 @@ import Parag from "../components/Parag.astro";
           </div>
         </div>
 
-        <div class="flex w-full justify-start">
+        <div class="ascuns flex w-full justify-start">
           <div class="flex flex-col items-start gap-3">
             <div class="flex items-center justify-center gap-4">
               <Image src={garden} alt="orange flower" class="w-14 md:w-20" />
@@ -129,6 +135,12 @@ import Parag from "../components/Parag.astro";
           </div>
         </div>
       </div>
+    </section>
+    <section
+      class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"
+    >
+      <LongTitle>Interested in working with us?</LongTitle>
+      <NavigateButton link="/contactform">Give us a message</NavigateButton>
     </section>
   </main>
 </Layout>

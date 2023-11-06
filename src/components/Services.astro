@@ -54,44 +54,50 @@ const services = [
   <div class="grid w-full max-w-2xl grid-cols-1 gap-2 md:grid-cols-2">
     {
       services.map((el, index) => (
-        <a
-          href={el.link}
-          class="group flex h-[400px] flex-col items-center justify-center overflow-hidden rounded-sm border-4 transition-all duration-500 hover:border-black"
-        >
-          <div class="flex h-[80%] w-full flex-col items-center justify-center gap-5 p-4">
-            <div class="order-2 flex h-28 w-28 items-center justify-center transition-all duration-500 group-hover:scale-110">
-              <Image alt={el.alt} src={el.img} class=" w-full drop-shadow-md" />
+        <div class="staggur ascuns">
+          <a
+            href={el.link}
+            class={` group flex h-[400px] flex-col items-center justify-center overflow-hidden rounded-sm border-4 transition-all duration-500 hover:border-black`}
+          >
+            <div class="flex h-[80%] w-full flex-col items-center justify-center gap-5 p-4">
+              <div class="order-2 flex h-28 w-28 items-center justify-center transition-all duration-500 group-hover:scale-110">
+                <Image
+                  alt={el.alt}
+                  src={el.img}
+                  class=" w-full drop-shadow-md"
+                />
+              </div>
+              <h4 class="order-1 text-center text-2xl font-bold">
+                {index === 0 ? (
+                  <span>
+                    Design <br /> & <br /> Installation
+                  </span>
+                ) : (
+                  el.title
+                )}
+              </h4>
             </div>
-            <h4 class="order-1 text-center text-2xl font-bold">
-              {index === 0 ? (
-                <span>
-                  Design <br /> & <br /> Installation
-                </span>
-              ) : (
-                el.title
-              )}
-            </h4>
-          </div>
-          <div class="relative flex flex-col items-center justify-center transition-all duration-500 group-hover:-translate-y-0 lg:translate-y-[150%]">
-            <span class="font-bold text-orange-600 transition-all duration-500">
-              Take me there!
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-              />
-            </svg>
-          </div>
-        </a>
+            <div class="relative flex flex-col items-center justify-center transition-all duration-500 group-hover:-translate-y-0 lg:translate-y-[150%]">
+              <span class="font-bold text-orange-600 transition-all duration-500">
+                Take me there!
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
       ))
     }
   </div>

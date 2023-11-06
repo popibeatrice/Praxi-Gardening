@@ -22,7 +22,56 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("arata-te");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".ascuns");
+  hiddenElements.forEach((element) => {
+    observer.observe(element);
+  });
+</script>
+
+<style is:global>
+  .ascuns {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.33, 1, 0.68, 1) 0.3s;
+  }
+
+  .arata-te {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (min-width: 1024px) {
+    .staggur:nth-child(2) {
+      transition-delay: 0.5s;
+    }
+
+    .staggur:nth-child(3) {
+      transition-delay: 0.75s;
+    }
+
+    .staggur:nth-child(4) {
+      transition-delay: 1s;
+    }
+  }
+
+  @media prefers-reduced-motion {
+    .ascuns {
+      transition: none;
+    }
+  }
+</style>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,7 +86,6 @@ const { title } = Astro.props;
     <meta name="theme-color" content="#ffffff" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
   </head>
   <body class="overflow-x-hidden font-montserrat">
     <Image
