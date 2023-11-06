@@ -84,9 +84,11 @@ import NavigateButton from "../components/NavigateButton.astro";
       <NavigateButton link="/photos">Explore The Gallery</NavigateButton>
     </section>
     <section
-      class="mx-auto grid min-h-[80vh] w-full max-w-[325px] grid-cols-1 justify-items-center gap-8 sm:max-w-[400px] md:max-w-none md:items-center lg:grid-cols-[0.85fr_1.15fr]"
+      class="mx-auto grid min-h-[80vh] w-full max-w-[325px] grid-cols-1 items-center justify-items-center gap-8 sm:max-w-[400px] md:max-w-none md:items-center lg:grid-cols-[0.85fr_1.15fr]"
     >
-      <LongTitle>Here's Where You Can Find Us!</LongTitle>
+      <div class="self-end lg:self-auto">
+        <LongTitle>Here's Where You Can Find Us!</LongTitle>
+      </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d303354.6943395189!2d-7.4638686!3d53.5585074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485dc34d5ce481b1%3A0xea07a6abadabd1fb!2sMcDermott%20Landscaping!5e0!3m2!1sro!2sro!4v1699102508928!5m2!1sro!2sro"
         width="100%"
@@ -94,7 +96,7 @@ import NavigateButton from "../components/NavigateButton.astro";
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
-        class="max-w-lg rounded-xl shadow-lg shadow-neutral-600 lg:max-w-none"
+        class="max-w-lg self-start rounded-xl shadow-lg shadow-neutral-600 lg:max-w-none lg:self-auto"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
