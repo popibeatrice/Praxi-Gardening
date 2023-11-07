@@ -16,9 +16,7 @@ import ShortTile from "../components/ShortTitle.astro";
 import Parag from "../components/Parag.astro";
 import NavigateButton from "../components/NavigateButton.astro";
 
-// import jsonCMS from "../CMS/design&installExpertise.json";
-// const object = JSON.parse(JSON.stringify(jsonCMS));
-// console.log(object.expertise - text);
+import jsonCMS from "../CMS/design&installExpertise.json";
 ---
 
 <Layout title="McDermott Landscaping | Design&Install">
@@ -66,15 +64,7 @@ import NavigateButton from "../components/NavigateButton.astro";
           class="mx-auto grid w-full max-w-[375px] grid-cols-1 justify-items-center sm:max-w-[425px] md:max-w-[725px] md:grid-cols-2 md:items-center lg:max-w-[925px]"
         >
           <Parag>
-            McDermott's design stands out for its unwavering commitment to
-            excellence in <span class="font-semibold"
-              >computer-aided designs</span
-            > (CAD), available upon request. With a focus on landscaping and
-            outdoor planning, we offer versatile services, that suit both
-            enthusiasts and those seeking a <span class="font-semibold"
-              >hassle-free experience</span
-            >. Our dedication to expertise and comprehensive project insurance
-            ensures your peace of mind throughout every project.
+            {jsonCMS.expertiseText}
           </Parag>
         </div>
       </div>
@@ -93,11 +83,7 @@ import NavigateButton from "../components/NavigateButton.astro";
               </h3>
             </div>
             <p class="min-[325px]:text-lg lg:max-w-xl lg:text-xl 2xl:text-2xl">
-              Elevate your outdoor projects with our specialized drawing
-              services. We create precise plans for landscaping and outdoor
-              areas, custom-tailored for planning applications. Let us bring
-              your outdoor vision to life with our professional, expertly
-              crafted drawings.
+              {jsonCMS.drawingServiceText}
             </p>
           </div>
         </div>
@@ -111,11 +97,7 @@ import NavigateButton from "../components/NavigateButton.astro";
               </h3>
             </div>
             <p class="min-[325px]:text-lg lg:max-w-xl lg:text-xl 2xl:text-2xl">
-              For clients eager to craft their own garden oasis, our
-              self-designed garden service is your ideal choice. We offer
-              comprehensive site surveys and consultations, or, if you prefer,
-              we can provide you with vivid, precisely scaled garden designs in
-              full color to inspire your DIY project.
+              {jsonCMS.gardenDesignText}
             </p>
           </div>
         </div>
@@ -129,12 +111,7 @@ import NavigateButton from "../components/NavigateButton.astro";
               </h3>
             </div>
             <p class="min-[325px]:text-lg lg:max-w-xl lg:text-xl 2xl:text-2xl">
-              And for those who are less green-fingered, our Turnkey Landscaping
-              Services are able to transform your vision into reality. We
-              initiate the process with a thorough site survey and client
-              consultation, delving into your unique requirements. Once the
-              design is perfected and given the green light, we swiftly prepare
-              a construction quote.
+              {jsonCMS.designAndBuildText}
             </p>
           </div>
         </div>
