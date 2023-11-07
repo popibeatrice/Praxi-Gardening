@@ -8,26 +8,10 @@ media_folder: "src/media" # Media files will be stored in the repo under static/
 public_folder: "/media" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  # - name: "softscaping" # Used in routes, e.g., /admin/collections/blog
-  #   label: "Softscaping" # Used in the UI
-  #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
-  #   create: true # Allow users to create new documents in this collection
-  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  #   fields: # The fields for each document, usually in front matter
-  #     - { label: "Description", name: "description", widget: "string" }
-
-  # - name: "hardscaping" # Used in routes, e.g., /admin/collections/blog
-  #   label: "Hardscaping" # Used in the UI
-  #   folder: "src/pages/HardscapingCMS" # The path to the folder where the documents are stored
-  #   create: true # Allow users to create new documents in this collection
-  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  #   fields: # The fields for each document, usually in front matter
-  #     - { label: "Description", name: "description", widget: "string" }
-
+files:
   - name: "design&install" # Used in routes, e.g., /admin/collections/blog
     label: "Design&Install" # Used in the UI
-    file: "src/pages/design&installCMS.yml" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    file: "site/content/design&installCMS.yml"
     fields: # The fields for each document, usually in front matter
       - {
           label: "Expertise text",
@@ -53,6 +37,52 @@ collections:
           widget: "string",
           optional: true,
         }
+
+  # - name: "softscaping" # Used in routes, e.g., /admin/collections/blog
+  #   label: "Softscaping" # Used in the UI
+  #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   fields: # The fields for each document, usually in front matter
+  #     - { label: "Description", name: "description", widget: "string" }
+
+  # - name: "hardscaping" # Used in routes, e.g., /admin/collections/blog
+  #   label: "Hardscaping" # Used in the UI
+  #   folder: "src/pages/HardscapingCMS" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   fields: # The fields for each document, usually in front matter
+  #     - { label: "Description", name: "description", widget: "string" }
+
+  # - name: "design&install" # Used in routes, e.g., /admin/collections/blog
+  #   label: "Design&Install" # Used in the UI
+  #   file: "src/pages/design&installCMS.yml" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   fields: # The fields for each document, usually in front matter
+  #     - {
+  #         label: "Expertise text",
+  #         name: "expertise-text",
+  #         widget: "string",
+  #         optional: true,
+  #       }
+  #     - {
+  #         label: "Drawing service text",
+  #         name: "drawing-service-text",
+  #         widget: "string",
+  #         optional: true,
+  #       }
+  #     - {
+  #         label: "Garden design text",
+  #         name: "garden-design-text",
+  #         widget: "string",
+  #         optional: true,
+  #       }
+  #     - {
+  #         label: "Design&Build service text",
+  #         name: "design&build-service-text",
+  #         widget: "string",
+  #         optional: true,
+  #       }
   # - name: "main-page" # Used in routes, e.g., /admin/collections/blog
   #   label: "Main page" # Used in the UI
   #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
