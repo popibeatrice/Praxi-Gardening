@@ -47,6 +47,8 @@ const hardscapingServices = [
       "Our Ground Work service is tailored to handle excavations and groundwork, whether it's for garden transformations or house terrain improvements, ensuring a solid foundation for your projects.",
   },
 ];
+
+import jsonCMS from "../CMS/softscapingPage.json";
 ---
 
 <style>
@@ -74,10 +76,7 @@ const hardscapingServices = [
           Softscaping
         </h1>
         <p class="hidden max-w-xl text-xl font-medium lg:block">
-          Elevate your landscape with our expert softscaping services. From
-          stunning specimen shrubs to year-round containerized trees, we offer a
-          wide range of planting options, along with essential ground work to
-          create the perfect outdoor space.
+          {jsonCMS.description}
         </p>
       </div>
 
@@ -90,16 +89,15 @@ const hardscapingServices = [
         />
       </div>
       <p class="max-w-lg text-center text-lg font-medium sm:text-xl lg:hidden">
-        From dreamy driveways to tranquil water features, we've got the perfect
-        elements to make your outdoor space truly special.
+        {jsonCMS.description}
       </p>
     </section>
     <section class="flex w-full flex-col justify-start gap-20">
       <div class="flex flex-col items-center justify-center">
         <ShortTitle>Services</ShortTitle>
-        <LongTitle>How can we help we?</LongTitle>
+        <LongTitle>{jsonCMS.servicesTitle}</LongTitle>
       </div>
-      <ServicesAcc services={hardscapingServices} client:load />
+      <ServicesAcc services={jsonCMS.hardScapingServices} client:load />
     </section>
     <section
       class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"

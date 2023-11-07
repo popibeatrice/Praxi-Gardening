@@ -54,6 +54,8 @@ const hardscapingServices = [
       "Our raised beds, walling, and kerbing service offers the construction of garden features made from timber, stone, or concrete, which can enhance your garden's aesthetic appeal and provide convenient access to planted areas while adding definition and structure to the landscape.",
   },
 ];
+
+import jsonCMS from "../CMS/hardscapingPage.json";
 ---
 
 <style>
@@ -81,10 +83,7 @@ const hardscapingServices = [
           Hardscaping
         </h1>
         <p class="hidden max-w-xl text-xl font-medium lg:block">
-          Elevate your outdoor space with our all-in-one hardscaping program,
-          offering tailored timber and stone features, stunning driveways,
-          patios, and footpaths for a functional and visually captivating
-          landscape.
+          {jsonCMS.description}
         </p>
       </div>
 
@@ -97,16 +96,17 @@ const hardscapingServices = [
         />
       </div>
       <p class="max-w-lg text-center text-lg font-medium sm:text-xl lg:hidden">
-        From dreamy driveways to tranquil water features, we've got the perfect
-        elements to make your outdoor space truly special.
+        {jsonCMS.description}
       </p>
     </section>
     <section class="flex w-full flex-col justify-start gap-20">
       <div class="flex flex-col items-center justify-center">
         <ShortTitle>Services</ShortTitle>
-        <LongTitle>How can we help we?</LongTitle>
+        <LongTitle>
+          {jsonCMS.servicesTitle}
+        </LongTitle>
       </div>
-      <ServicesAcc services={hardscapingServices} client:load />
+      <ServicesAcc services={jsonCMS.hardScapingServices} client:load />
     </section>
     <section
       class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"
