@@ -26,25 +26,32 @@ collections:
 
   - name: "design&install" # Used in routes, e.g., /admin/collections/blog
     label: "Design&Install" # Used in the UI
-    folder: "src/pages/design&installCMS" # The path to the folder where the documents are stored
+    file: "src/pages/design&installCMS" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: "Expertise text", name: "expertise-text", widget: "string" }
+      - {
+          label: "Expertise text",
+          name: "expertise-text",
+          widget: "string",
+          optional: true,
+        }
       - {
           label: "Drawing service text",
           name: "drawing-service-text",
           widget: "string",
+          optional: true,
         }
       - {
           label: "Garden design text",
           name: "garden-design-text",
           widget: "string",
+          optional: true,
         }
       - {
           label: "Design&Build service text",
           name: "design&build-service-text",
           widget: "string",
+          optional: true,
         }
   # - name: "main-page" # Used in routes, e.g., /admin/collections/blog
   #   label: "Main page" # Used in the UI
