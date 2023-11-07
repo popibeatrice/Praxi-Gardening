@@ -15,6 +15,10 @@ import LongTitle from "../components/LongTitle.astro";
 import ShortTile from "../components/ShortTitle.astro";
 import Parag from "../components/Parag.astro";
 import NavigateButton from "../components/NavigateButton.astro";
+
+import jsonCMS from "../CMS/design&installExpertise.json";
+const object = JSON.parse(JSON.stringify(jsonCMS));
+console.log(object.expertise - text);
 ---
 
 <Layout title="McDermott Landscaping | Design&Install">

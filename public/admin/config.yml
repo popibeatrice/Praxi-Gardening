@@ -13,29 +13,29 @@ collections:
     files:
       - name: "design&installExpertise" # Used in routes, e.g., /admin/collections/blog
         label: "Design&Install Expertise" # Used in the UI
-        file: "src/pages/design&installExpertise.json"
+        file: "src/CMS/design&installExpertise.json"
         fields: # The fields for each document, usually in front matter
           - {
               label: "Expertise text",
-              name: "expertise-text",
+              name: "expertiseText",
               widget: "text",
               optional: true,
             }
           - {
               label: "Drawing service text",
-              name: "drawing-service-text",
+              name: "drawingServiceText",
               widget: "text",
               optional: true,
             }
           - {
               label: "Garden design text",
-              name: "garden-design-text",
+              name: "gardenDesignText",
               widget: "text",
               optional: true,
             }
           - {
               label: "Design&Build service text",
-              name: "design&build-service-text",
+              name: "design&buildText",
               widget: "text",
               optional: true,
             }
@@ -56,35 +56,7 @@ collections:
     #   fields: # The fields for each document, usually in front matter
     #     - { label: "Description", name: "description", widget: "string" }
 
-    # - name: "design&install" # Used in routes, e.g., /admin/collections/blog
-    #   label: "Design&Install" # Used in the UI
-    #   file: "src/pages/design&installCMS.yml" # The path to the folder where the documents are stored
-    #   create: true # Allow users to create new documents in this collection
-    #   fields: # The fields for each document, usually in front matter
-    #     - {
-    #         label: "Expertise text",
-    #         name: "expertise-text",
-    #         widget: "string",
-    #         optional: true,
-    #       }
-    #     - {
-    #         label: "Drawing service text",
-    #         name: "drawing-service-text",
-    #         widget: "string",
-    #         optional: true,
-    #       }
-    #     - {
-    #         label: "Garden design text",
-    #         name: "garden-design-text",
-    #         widget: "string",
-    #         optional: true,
-    #       }
-    #     - {
-    #         label: "Design&Build service text",
-    #         name: "design&build-service-text",
-    #         widget: "string",
-    #         optional: true,
-    #       }
+    #
     # - name: "main-page" # Used in routes, e.g., /admin/collections/blog
     #   label: "Main page" # Used in the UI
     #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
