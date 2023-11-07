@@ -18,25 +18,25 @@ collections:
           - {
               label: "Expertise text",
               name: "expertise-text",
-              widget: "string",
+              widget: "text",
               optional: true,
             }
           - {
               label: "Drawing service text",
               name: "drawing-service-text",
-              widget: "string",
+              widget: "text",
               optional: true,
             }
           - {
               label: "Garden design text",
               name: "garden-design-text",
-              widget: "string",
+              widget: "text",
               optional: true,
             }
           - {
               label: "Design&Build service text",
               name: "design&build-service-text",
-              widget: "string",
+              widget: "text",
               optional: true,
             }
 
