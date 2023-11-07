@@ -8,10 +8,48 @@ media_folder: "src/media" # Media files will be stored in the repo under static/
 public_folder: "/media" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "softscaping" # Used in routes, e.g., /admin/collections/blog
-    label: "Softscaping" # Used in the UI
-    folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
+  # - name: "softscaping" # Used in routes, e.g., /admin/collections/blog
+  #   label: "Softscaping" # Used in the UI
+  #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   fields: # The fields for each document, usually in front matter
+  #     - { label: "Description", name: "description", widget: "string" }
+
+  # - name: "hardscaping" # Used in routes, e.g., /admin/collections/blog
+  #   label: "Hardscaping" # Used in the UI
+  #   folder: "src/pages/HardscapingCMS" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   fields: # The fields for each document, usually in front matter
+  #     - { label: "Description", name: "description", widget: "string" }
+
+  - name: "design&install" # Used in routes, e.g., /admin/collections/blog
+    label: "Design&Install" # Used in the UI
+    folder: "src/pages/design&installCMS" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Expertise text", name: "expertise-text", widget: "string" }
+      - {
+          label: "Drawing service text",
+          name: "drawing-service-text",
+          widget: "string",
+        }
+      - {
+          label: "Garden design text",
+          name: "garden-design-text",
+          widget: "string",
+        }
+      - {
+          label: "Design&Build service text",
+          name: "design&build-service-text",
+          widget: "string",
+        }
+  # - name: "main-page" # Used in routes, e.g., /admin/collections/blog
+  #   label: "Main page" # Used in the UI
+  #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   fields: # The fields for each document, usually in front matter
+  #     - { label: "Description", name: "description", widget: "string" }
