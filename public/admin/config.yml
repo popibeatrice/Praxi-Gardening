@@ -8,12 +8,29 @@ media_folder: "src/media" # Media files will be stored in the repo under static/
 public_folder: "/media" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - label: "Design&Install"
-    name: "design&install"
+  - label: "Website pages"
+    name: "websitePages"
     files:
-      - name: "design&installExpertise" # Used in routes, e.g., /admin/collections/blog
-        label: "Design&Install Expertise" # Used in the UI
-        file: "src/CMS/design&installExpertise.json"
+      - name: "mainPage" # Used in routes, e.g., /admin/collections/blog
+        label: "Main Page" # Used in the UI
+        file: "src/CMS/mainPage.json"
+        fields:
+          - label: "Reason to choose McDermott(Why us)"
+            name: "reason"
+            widget: "object"
+            fields:
+              - { label: "Reason Title", name: "reasonTitle", widget: "string" }
+              - { label: "Reason Text", name: "reasonText", widget: "string" }
+          - label: "The Story of McDermott(Our story)"
+            name: "story"
+            widget: "object"
+            fields:
+              - { label: "Story Title", name: "storyTitle", widget: "string" }
+              - { label: "Story Text", name: "storyText", widget: "string" }
+
+      - name: "design&installPage" # Used in routes, e.g., /admin/collections/blog
+        label: "Design&Install Page" # Used in the UI
+        file: "src/CMS/design&installPage.json"
         fields: # The fields for each document, usually in front matter
           - {
               label: "Expertise text",

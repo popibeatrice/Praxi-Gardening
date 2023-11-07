@@ -7,6 +7,8 @@ import Services from "../components/Services.astro";
 
 import LongTitle from "@/components/LongTitle.astro";
 import NavigateButton from "../components/NavigateButton.astro";
+
+import jsonCMS from "../CMS/mainPage.json";
 ---
 
 <script
@@ -36,45 +38,22 @@ import NavigateButton from "../components/NavigateButton.astro";
   >
     <LandHero />
     <div class="flex flex-col items-center gap-20">
-      <LandPoint title="Why Us" subTitle="Quality of Craftsmanship">
+      <LandPoint title="Why Us" subTitle={jsonCMS.reason.reasonTitle}>
         <Parag
           class="col-span-2 min-[325px]:text-lg md:text-center lg:text-xl 2xl:text-2xl"
         >
-          At <span class="font-semibold">McDermott Landscaping</span>, we offer
-          our customers a comprehensive range of services to create bespoke and
-          <span class="font-semibold">elegant gardens</span>. Our pride lies in
-          the exceptional quality of our craftsmanship, ensuring minimal
-          disturbance to you during our work. We possess expertise in all
-          aspects of <span class="font-semibold">computer-aided designs</span>
-           (CAD), available upon request, tailored to meet your specific needs.
-          As fully insured and highly experienced landscape professionals with <span
-            class="font-semibold">over 20 years of expertise</span
-          > in landscaping design and construction, we guarantee a seamless,
-          professional experience from concept to completion.
+          {jsonCMS.reason.reasonTitle}
         </Parag>
       </LandPoint>
-      <LandPoint title="Our Story" subTitle="Family and Landscaping">
+      <LandPoint title="Our Story" subTitle={jsonCMS.story.storyTitle}>
         <Parag
           class="col-span-2 min-[325px]:text-lg md:text-center lg:text-xl 2xl:text-2xl"
         >
           <span
             class="font-bold text-orange-600 min-[325px]:text-2xl lg:text-3xl 2xl:text-4xl"
             >Hello!</span
-          > My name is <span class="font-semibold">Connor McDermott</span>, and
-          in the 1990s, I embarked on my landscaping journey right after
-          finishing college. After gaining valuable experience with one of <span
-            class="font-semibold">Ireland's top landscaping companies</span
-          >, my wife and I used our expertise to establish McDermott
-          Landscaping. Today, McDermott Landscaping stands proudly as a <span
-            class="font-semibold">market leader</span
-          > , renowned for our quality work and exceptional service in <span
-            class="font-semibold">Westmeath</span
           >
-           and the greater Leinster area. We offer a comprehensive range of
-          services, ensuring a seamless experience for our clients. With us, you
-          have a <span class="font-semibold">single point of contact</span>
-           throughout the entire project, allowing us to bring your vision to
-          life with professionalism and warmth.
+          {jsonCMS.reason.reasonText}
         </Parag>
       </LandPoint>
     </div>
