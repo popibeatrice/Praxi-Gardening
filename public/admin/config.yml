@@ -13,7 +13,7 @@ collections:
     files:
       - name: "design&installExpertise" # Used in routes, e.g., /admin/collections/blog
         label: "Design&Install Expertise" # Used in the UI
-        file: "src/pages/design&installExpertise.yml"
+        file: "src/pages/design&installExpertise.json"
         fields: # The fields for each document, usually in front matter
           - {
               label: "Expertise text",
