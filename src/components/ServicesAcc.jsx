@@ -14,7 +14,7 @@ export default function ServicesAcc({ services }) {
             <AccordionTrigger className="text-left hover:no-underline">
               <div className="flex items-center gap-5">
                 <img
-                  src={service.serviceIcon}
+                  src={service.serviceIcon.src}
                   alt="service icon"
                   className="w-10 lg:w-12"
                 />
