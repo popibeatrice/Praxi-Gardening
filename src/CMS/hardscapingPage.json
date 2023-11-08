@@ -3,33 +3,33 @@
   "servicesTitle": "How can we help you?",
   "hardScapingServices": [
     {
-      "serviceIcon": "./sakura.png",
+      "serviceIcon": "/sakura.png",
       "serviceName": "Specimen shrubs",
       "serviceDescription": "Our specimen shrubs service offers large, unique plants with that 'wow' factor, elevating your garden with exceptional, one-of-a-kind greenery, creating a distinctive and awe-inspiring landscape with our stunning selection of specimen shrubs."
     },
 
     {
-      "serviceIcon": "./grass.png",
+      "serviceIcon": "/grass.png",
       "serviceName": "Lawns and grass areas",
       "serviceDescription": "We specialized in creating lush, vibrant lawns and grassy spaces to enjoy and relax in, enhancing the natural beauty of your landscape."
     },
     {
-      "serviceIcon": "./concrete.png",
+      "serviceIcon": "/concrete.png",
       "serviceName": "Concrete work",
       "serviceDescription": "We specialized in crafting durable and versatile concrete structures for various purposes, from patios and driveways to foundations and decorative elements, ensuring both functionality and aesthetic appeal in construction projects."
     },
     {
-      "serviceIcon": "./plant.png",
+      "serviceIcon": "/plant.png",
       "serviceName": "Planting",
       "serviceDescription": "Our versatile Planting service offers a wide selection of shrubs, herbaceous plants, grasses, alpine species, and bamboo, available in various sizes. Additionally, our Tree Planting service provides year-round access to containerized trees, with an extensive range of varieties and sizes, enabling you to transform your landscape with ease."
     },
     {
-      "serviceIcon": "./hedge.png",
+      "serviceIcon": "/hedge.png",
       "serviceName": "Hedging and transplants",
       "serviceDescription": "Our Hedging and Transplants service is specially tailored for creating natural hedgerows and woodland-effect planting, adding privacy and a touch of nature to your garden."
     },
     {
-      "serviceIcon": "./excavator.png",
+      "serviceIcon": "/excavator.png",
       "serviceName": "Groundwork",
       "serviceDescription": "Our Ground Work service is tailored to handle excavations and groundwork, whether it's for garden transformations or house terrain improvements, ensuring a solid foundation for your projects."
     }
