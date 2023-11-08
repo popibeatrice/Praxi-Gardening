@@ -31,6 +31,8 @@ collections:
       - name: "softscapingPage" # Used in routes, e.g., /admin/collections/blog
         label: "Softscaping Page" # Used in the UI
         file: "src/CMS/softscapingPage.json"
+        media_folder: "{{media_folder}}/soft" # Media files will be stored in the repo under static/images/uploads
+        public_folder: "{{public_folder}}/soft" # The src attribute for uploaded media will begin with /images/uploads
         fields:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
@@ -49,6 +51,8 @@ collections:
       - name: "hardcapingPage" # Used in routes, e.g., /admin/collections/blog
         label: "Hardscaping Page" # Used in the UI
         file: "src/CMS/hardscapingPage.json"
+        media_folder: "{{media_folder}}/hard" # Media files will be stored in the repo under static/images/uploads
+        public_folder: "{{public_folder}}/hard" # The src attribute for uploaded media will begin with /images/uploads
         fields:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
