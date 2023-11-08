@@ -1,4 +1,43 @@
 {
   "description": "Elevate your outdoor space with our all-in-one hardscaping program, offering tailored timber and stone features, stunning driveways, patios, and footpaths for a functional and visually captivating landscape.",
-  "servicesTitle": "How can we help you?"
+  "servicesTitle": "How can we help you?",
+  "hardScapingServices": [
+    {
+      "serviceIcon": "/abstract.png",
+      "serviceName": "Decorative gravel",
+      "serviceDescription": "Our decorative gravel service offers a range of aesthetically pleasing gravel options for landscaping and garden projects, enhancing outdoor spaces with diverse colors and textures."
+    },
+    {
+      "serviceIcon": "/fountain.png",
+      "serviceName": "Water features",
+      "serviceDescription": "Our water features service provides endless possibilities for enhancing outdoor spaces with unique elements like copper, glass, granite, steel, natural stone, or ponds, creating tranquil and captivating environments through the soothing sights and sounds of water."
+    },
+    {
+      "serviceIcon": "/concrete.png",
+      "serviceName": "Concrete work",
+      "serviceDescription": "We specialized in crafting durable and versatile concrete structures for various purposes, from patios and driveways to foundations and decorative elements, ensuring both functionality and aesthetic appeal in construction projects."
+    },
+    {
+      "serviceIcon": "/shed.png",
+      "serviceName": "Timber work and sheds",
+      "serviceDescription": "We specialized in crafting bespoke timber structures like decking, fencing, trellis, gates, pergolas, gazebos, planters, and balcony furniture, offering made-to-measure solutions to enhance and beautify outdoor spaces while providing storage and functionality with sheds and other wooden constructions."
+    },
+    {
+      "serviceIcon": "/road.png",
+      "serviceName": "Driveways, patios and footpaths",
+      "serviceDescription": "We specialized in creating beautifully designed outdoor spaces using a wide selection of materials such as block paving, cobble setts, tarmac, and concrete slabs. They transform driveways, patios, and footpaths into functional and aesthetically pleasing areas for your home."
+    },
+    {
+      "serviceIcon": "/brickwall.png",
+      "serviceName": "Raised beds walling and kerbing",
+      "serviceDescription": "Our raised beds, walling, and kerbing service offers the construction of garden features made from timber, stone, or concrete, which can enhance your garden's aesthetic appeal and provide convenient access to planted areas while adding definition and structure to the landscape."
+    }
+  ],
+  "softScapingServices": [
+    {
+      "serviceIcon": "/media/abstract.png",
+      "serviceName": "Decorative gravel",
+      "serviceDescription": "Our decorative gravel service offers a range of aesthetically pleasing gravel options for landscaping and garden projects, enhancing outdoor spaces with diverse colors and textures."
+    }
+  ]
 }
