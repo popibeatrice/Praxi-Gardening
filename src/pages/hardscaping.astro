@@ -10,7 +10,7 @@ import NavigateButton from "../components/NavigateButton.astro";
 import ServicesAcc from "../components/ServicesAcc";
 
 import jsonCMS from "../CMS/hardscapingPage.json";
-console.log(jsonCMS);
+const data = JSON.parse(JSON.stringify(jsonCMS));
 ---
 
 <style>
@@ -37,9 +37,7 @@ console.log(jsonCMS);
         >
           Hardscaping
         </h1>
-        <p class="hidden max-w-xl text-xl font-medium lg:block">
-          {jsonCMS.description}
-        </p>
+        <p class="hidden max-w-xl text-xl font-medium lg:block">placeholder</p>
       </div>
 
       <div class="flex items-center justify-center">
@@ -51,17 +49,15 @@ console.log(jsonCMS);
         />
       </div>
       <p class="max-w-lg text-center text-lg font-medium sm:text-xl lg:hidden">
-        {jsonCMS.description}
+        placeholder
       </p>
     </section>
     <section class="flex w-full flex-col justify-start gap-20">
       <div class="flex flex-col items-center justify-center">
         <ShortTitle>Services</ShortTitle>
-        <LongTitle>
-          {jsonCMS.servicesTitle}
-        </LongTitle>
+        <LongTitle>placeholder</LongTitle>
       </div>
-      <ServicesAcc services={jsonCMS.hardScapingServices} client:load />
+      <ServicesAcc services={[1, 2, 3, 4]} client:load />
     </section>
     <section
       class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"
