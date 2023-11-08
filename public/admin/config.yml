@@ -34,17 +34,17 @@ collections:
         fields:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
-      #     - label: "Softscaping Services"
-      #       name: "softScapingServices"
-      #       widget: "list"
-      #       fields:
-      #         - { label: "Service Icon", name: "serviceIcon", widget: "image" }
-      #         - { label: "Service Name", name: "serviceName", widget: "string" }
-      #         - {
-      #             label: "Service Description",
-      #             name: "serviceDescription",
-      #             widget: "text",
-      #           }
+          - label: "Softscaping Services"
+            name: "softScapingServices"
+            widget: "list"
+            fields:
+              - { label: "Service Icon", name: "serviceIcon", widget: "image" }
+              - { label: "Service Name", name: "serviceName", widget: "string" }
+              - {
+                  label: "Service Description",
+                  name: "serviceDescription",
+                  widget: "text",
+                }
 
       - name: "hardcapingPage" # Used in routes, e.g., /admin/collections/blog
         label: "Hardscaping Page" # Used in the UI
@@ -52,17 +52,17 @@ collections:
         fields:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
-      #     - label: "Hardscaping Services"
-      #       name: "hardScapingServices"
-      #       widget: "list"
-      #       fields:
-      #         - { label: "Service Icon", name: "serviceIcon", widget: "image" }
-      #         - { label: "Service Name", name: "serviceName", widget: "string" }
-      #         - {
-      #             label: "Service Description",
-      #             name: "serviceDescription",
-      #             widget: "text",
-      #           }
+          - label: "Hardscaping Services"
+            name: "hardScapingServices"
+            widget: "list"
+            fields:
+              - { label: "Service Icon", name: "serviceIcon", widget: "image" }
+              - { label: "Service Name", name: "serviceName", widget: "string" }
+              - {
+                  label: "Service Description",
+                  name: "serviceDescription",
+                  widget: "text",
+                }
 
       - name: "design&installPage" # Used in routes, e.g., /admin/collections/blog
         label: "Design&Install Page" # Used in the UI
