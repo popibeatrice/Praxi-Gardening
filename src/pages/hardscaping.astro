@@ -16,7 +16,9 @@ const media = await Astro.glob("../CMS/src/media/hard/*");
 const combo = data.hardScapingServices.map((item) => {
   let imagey = "";
   media.forEach((image) => {
-    if (image.default.src.includes(item.serviceIcon)) {
+    if (
+      image.default.src.includes(item.serviceIcon.split("/")[3].split(".")[0])
+    ) {
       imagey = image.default.src;
     }
   });

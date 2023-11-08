@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/accordion";
 
 export default function ServicesAcc({ services }) {
-  console.log(services);
   return (
     <Accordion type="single" collapsible>
       {services.map((service, index) => {

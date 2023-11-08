@@ -12,16 +12,29 @@ import ServicesAcc from "../components/ServicesAcc";
 import jsonCMS from "../CMS/softscapingPage.json";
 const data = JSON.parse(JSON.stringify(jsonCMS));
 
+console.log(data);
+
+console.log("GATA");
+
 const media = await Astro.glob("../CMS/src/media/soft/*");
+
+console.log(media);
+
+console.log("GATA");
+
 const combo = data.softScapingServices.map((item) => {
   let imagey = "";
   media.forEach((image) => {
-    if (image.default.src.includes(item.serviceIcon)) {
+    if (
+      image.default.src.includes(item.serviceIcon.split("/")[3].split(".")[0])
+    ) {
       imagey = image.default.src;
     }
   });
   return { ...item, image: imagey };
 });
+
+console.log(combo);
 ---
 
 <style>
