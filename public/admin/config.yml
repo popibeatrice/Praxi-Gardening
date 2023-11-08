@@ -28,41 +28,41 @@ collections:
               - { label: "Story Title", name: "storyTitle", widget: "string" }
               - { label: "Story Text", name: "storyText", widget: "text" }
 
-      - name: "softscapingPage" # Used in routes, e.g., /admin/collections/blog
-        label: "Softscaping Page" # Used in the UI
-        file: "src/CMS/softscapingPage.json"
-        fields:
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Services Title", name: "servicesTitle", widget: "string" }
-          - label: "Softscaping Services"
-            name: "softScapingServices"
-            widget: "list"
-            fields:
-              - { label: "Service Icon", name: "serviceIcon", widget: "image" }
-              - { label: "Service Name", name: "serviceName", widget: "string" }
-              - {
-                  label: "Service Description",
-                  name: "serviceDescription",
-                  widget: "text",
-                }
+      # - name: "softscapingPage" # Used in routes, e.g., /admin/collections/blog
+      #   label: "Softscaping Page" # Used in the UI
+      #   file: "src/CMS/softscapingPage.json"
+      #   fields:
+      #     - { label: "Description", name: "description", widget: "text" }
+      #     - { label: "Services Title", name: "servicesTitle", widget: "string" }
+      #     - label: "Softscaping Services"
+      #       name: "softScapingServices"
+      #       widget: "list"
+      #       fields:
+      #         - { label: "Service Icon", name: "serviceIcon", widget: "image" }
+      #         - { label: "Service Name", name: "serviceName", widget: "string" }
+      #         - {
+      #             label: "Service Description",
+      #             name: "serviceDescription",
+      #             widget: "text",
+      #           }
 
-      - name: "hardcapingPage" # Used in routes, e.g., /admin/collections/blog
-        label: "Hardscaping Page" # Used in the UI
-        file: "src/CMS/hardscapingPage.json"
-        fields:
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Services Title", name: "servicesTitle", widget: "string" }
-          - label: "Hardscaping Services"
-            name: "hardScapingServices"
-            widget: "list"
-            fields:
-              - { label: "Service Icon", name: "serviceIcon", widget: "image" }
-              - { label: "Service Name", name: "serviceName", widget: "string" }
-              - {
-                  label: "Service Description",
-                  name: "serviceDescription",
-                  widget: "text",
-                }
+      # - name: "hardcapingPage" # Used in routes, e.g., /admin/collections/blog
+      #   label: "Hardscaping Page" # Used in the UI
+      #   file: "src/CMS/hardscapingPage.json"
+      #   fields:
+      #     - { label: "Description", name: "description", widget: "text" }
+      #     - { label: "Services Title", name: "servicesTitle", widget: "string" }
+      #     - label: "Hardscaping Services"
+      #       name: "hardScapingServices"
+      #       widget: "list"
+      #       fields:
+      #         - { label: "Service Icon", name: "serviceIcon", widget: "image" }
+      #         - { label: "Service Name", name: "serviceName", widget: "string" }
+      #         - {
+      #             label: "Service Description",
+      #             name: "serviceDescription",
+      #             widget: "text",
+      #           }
 
       - name: "mainPage" # Used in routes, e.g., /admin/collections/blog
         label: "Main Page" # Used in the UI
