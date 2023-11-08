@@ -55,6 +55,8 @@ collections:
           - label: "Hardscaping Services"
             name: "hardScapingServices"
             widget: "list"
+            collapsed: "true"
+            allow_add: "true"
             fields:
               - { label: "Service Icon", name: "serviceIcon", widget: "image" }
               - { label: "Service Name", name: "serviceName", widget: "string" }
