@@ -3,53 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 import softscapingHero from "../assets/Softscaping.jpg";
-import flower from "../assets/sakura.png";
-import grass from "../assets/grass.png";
-import plant from "../assets/plant.png";
-import hedging from "../assets/hedge.png";
-import excavator from "../assets/excavator.png";
 
 import ShortTitle from "@/components/ShortTitle.astro";
 import LongTitle from "@/components/LongTitle.astro";
 import NavigateButton from "../components/NavigateButton.astro";
 import ServicesAcc from "../components/ServicesAcc";
 
-// const hardscapingServices = [
-//   {
-//     icon: flower,
-//     title: "Specimen shrubs",
-//     parag:
-//       "Our specimen shrubs service offers large, unique plants with that 'wow' factor, elevating your garden with exceptional, one-of-a-kind greenery, creating a distinctive and awe-inspiring landscape with our stunning selection of specimen shrubs.",
-//   },
-
-//   {
-//     icon: grass,
-//     title: "Lawns and grass areas",
-//     parag:
-//       "We specialized in creating lush, vibrant lawns and grassy spaces to enjoy and relax in, enhancing the natural beauty of your landscape.",
-//   },
-//   {
-//     icon: plant,
-//     title: "Planting",
-//     parag:
-//       "Our versatile Planting service offers a wide selection of shrubs, herbaceous plants, grasses, alpine species, and bamboo, available in various sizes. Additionally, our Tree Planting service provides year-round access to containerized trees, with an extensive range of varieties and sizes, enabling you to transform your landscape with ease.",
-//   },
-//   {
-//     icon: hedging,
-//     title: "Hedging and transplants",
-//     parag:
-//       "Our Hedging and Transplants service is specially tailored for creating natural hedgerows and woodland-effect planting, adding privacy and a touch of nature to your garden.",
-//   },
-//   {
-//     icon: excavator,
-//     title: "Groundwork",
-//     parag:
-//       "Our Ground Work service is tailored to handle excavations and groundwork, whether it's for garden transformations or house terrain improvements, ensuring a solid foundation for your projects.",
-//   },
-// ];
-
 import jsonCMS from "../CMS/softscapingPage.json";
-console.log(jsonCMS);
+const data = JSON.parse(JSON.stringify(jsonCMS));
 ---
 
 <style>
@@ -77,7 +38,7 @@ console.log(jsonCMS);
           Softscaping
         </h1>
         <p class="hidden max-w-xl text-xl font-medium lg:block">
-          {jsonCMS.description}
+          {data.description}
         </p>
       </div>
 
@@ -90,15 +51,15 @@ console.log(jsonCMS);
         />
       </div>
       <p class="max-w-lg text-center text-lg font-medium sm:text-xl lg:hidden">
-        {jsonCMS.description}
+        {data.description}
       </p>
     </section>
     <section class="flex w-full flex-col justify-start gap-20">
       <div class="flex flex-col items-center justify-center">
         <ShortTitle>Services</ShortTitle>
-        <LongTitle>{jsonCMS.servicesTitle}</LongTitle>
+        <LongTitle>{data.servicesTitle}</LongTitle>
       </div>
-      <ServicesAcc services={jsonCMS.hardScapingServices} client:load />
+      <ServicesAcc services={data.hardScapingServices} client:load />
     </section>
     <section
       class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"
