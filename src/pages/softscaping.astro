@@ -48,7 +48,7 @@ import ServicesAcc from "../components/ServicesAcc";
 //   },
 // ];
 
-// import jsonCMS from "../CMS/softscapingPage.json";
+import jsonCMS from "../CMS/softscapingPage.json";
 ---
 
 <style>
@@ -76,7 +76,7 @@ import ServicesAcc from "../components/ServicesAcc";
           Softscaping
         </h1>
         <p class="hidden max-w-xl text-xl font-medium lg:block">
-          <!-- {jsonCMS.description} -->
+          {jsonCMS.description}
         </p>
       </div>
 
@@ -89,16 +89,16 @@ import ServicesAcc from "../components/ServicesAcc";
         />
       </div>
       <p class="max-w-lg text-center text-lg font-medium sm:text-xl lg:hidden">
-        <!-- {jsonCMS.description} -->
+        {jsonCMS.description}
       </p>
     </section>
-    <!-- <section class="flex w-full flex-col justify-start gap-20">
+    <section class="flex w-full flex-col justify-start gap-20">
       <div class="flex flex-col items-center justify-center">
         <ShortTitle>Services</ShortTitle>
         <LongTitle>{jsonCMS.servicesTitle}</LongTitle>
       </div>
       <ServicesAcc services={jsonCMS.hardScapingServices} client:load />
-    </section> -->
+    </section>
     <section
       class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"
     >
