@@ -94,28 +94,3 @@ collections:
               widget: "text",
               optional: true,
             }
-
-    # - name: "softscaping" # Used in routes, e.g., /admin/collections/blog
-    #   label: "Softscaping" # Used in the UI
-    #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
-    #   create: true # Allow users to create new documents in this collection
-    #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    #   fields: # The fields for each document, usually in front matter
-    #     - { label: "Description", name: "description", widget: "string" }
-
-    # - name: "hardscaping" # Used in routes, e.g., /admin/collections/blog
-    #   label: "Hardscaping" # Used in the UI
-    #   folder: "src/pages/HardscapingCMS" # The path to the folder where the documents are stored
-    #   create: true # Allow users to create new documents in this collection
-    #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    #   fields: # The fields for each document, usually in front matter
-    #     - { label: "Description", name: "description", widget: "string" }
-
-    #
-    # - name: "main-page" # Used in routes, e.g., /admin/collections/blog
-    #   label: "Main page" # Used in the UI
-    #   folder: "src/pages/softscapingCMS" # The path to the folder where the documents are stored
-    #   create: true # Allow users to create new documents in this collection
-    #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    #   fields: # The fields for each document, usually in front matter
-    #     - { label: "Description", name: "description", widget: "string" }
