@@ -11,6 +11,17 @@ import ServicesAcc from "../components/ServicesAcc";
 
 import jsonCMS from "../CMS/softscapingPage.json";
 const data = JSON.parse(JSON.stringify(jsonCMS));
+
+const media = await Astro.glob("../CMS/src/media/soft/*");
+const combo = data.softScapingServices.map((item) => {
+  let imagey = "";
+  media.forEach((image) => {
+    if (image.default.src.includes(item.serviceIcon)) {
+      imagey = image.default.src;
+    }
+  });
+  return { ...item, image: imagey };
+});
 ---
 
 <style>
@@ -37,7 +48,9 @@ const data = JSON.parse(JSON.stringify(jsonCMS));
         >
           Softscaping
         </h1>
-        <p class="hidden max-w-xl text-xl font-medium lg:block">placeholder</p>
+        <p class="hidden max-w-xl text-xl font-medium lg:block">
+          {data.description}
+        </p>
       </div>
 
       <div class="flex items-center justify-center">
@@ -49,15 +62,15 @@ const data = JSON.parse(JSON.stringify(jsonCMS));
         />
       </div>
       <p class="max-w-lg text-center text-lg font-medium sm:text-xl lg:hidden">
-        placeholder
+        {data.description}
       </p>
     </section>
     <section class="flex w-full flex-col justify-start gap-20">
       <div class="flex flex-col items-center justify-center">
         <ShortTitle>Services</ShortTitle>
-        <LongTitle>placeholder</LongTitle>
+        <LongTitle>{data.servicesTitle}</LongTitle>
       </div>
-      <ServicesAcc services={[1, 2, 3]} client:load />
+      <ServicesAcc services={combo} client:load />
     </section>
     <section
       class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"
