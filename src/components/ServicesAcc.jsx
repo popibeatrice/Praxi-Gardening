@@ -13,11 +13,11 @@ export default function ServicesAcc({ services }) {
           <AccordionItem key={service.title} value={service.title}>
             <AccordionTrigger className="text-left hover:no-underline">
               <div className="flex items-center gap-5">
-                {/* <img
+                <img
                   src={service.serviceIcon}
                   alt="service icon"
                   className="w-10 lg:w-12"
-                /> */}
+                />
                 <h3 className="text-2xl lg:text-3xl">{service.serviceName}</h3>
               </div>
             </AccordionTrigger>
