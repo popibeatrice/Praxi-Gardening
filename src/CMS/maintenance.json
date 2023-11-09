@@ -1,3 +1,21 @@
 {
-  "description": "Elevate your landscape with our expert softscaping services. From stunning specimen shrubs to year-round containerized trees, we offer a wide range of planting options, along with essential ground work to create the perfect outdoor space."
+  "description": "Taking care of a large garden space can be a mighty task. With a busy schedule and little time to tend to the needs of plants and tree pruning, you’ll find your garden or green space can quickly turn from an area of relaxation to something of a nightmare. That's why we are here!",
+  "servicesTitle": "How can we help you?",
+  "maintenanceServices": [
+    {
+      "serviceName": "Comercial Garden Maintenance",
+      "serviceDescription": "Professional Garden Maintenance: Elevate your outdoor space with our expert services. We specialize in meticulous garden care, including precise pruning, plant nourishment, and tailored landscape maintenance. Entrust us to transform your garden into a thriving, pristine oasis. Experience the difference of professional expertise.",
+      "serviceIcon": "/media/maintenance/pruning-shears.png"
+    },
+    {
+      "serviceName": "Pressure Washing of Driveways",
+      "serviceDescription": "Professional Pressure Washing of Driveways: Restore the pristine look of your property with our expert pressure washing service. Our skilled technicians utilize advanced equipment to remove stubborn stains, dirt, and grime, enhancing the curb appeal of your driveway. Trust us for a thorough and professional cleaning experience, leaving your driveway spotless and revitalized.",
+      "serviceIcon": "/media/maintenance/pressure-washer.png"
+    },
+    {
+      "serviceName": "Shrub & Tree Shaping",
+      "serviceDescription": "Elevate your landscape with our professional shaping service. Our skilled arborists meticulously sculpt shrubs and trees, enhancing their natural beauty and promoting healthy growth. Trust us to transform your outdoor space into a harmonious and visually appealing environment. Experience the artistry of professional tree shaping.",
+      "serviceIcon": "/media/maintenance/tree.png"
+    }
+  ]
 }
