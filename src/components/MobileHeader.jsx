@@ -9,7 +9,7 @@ const links = [
   },
   {
     name: "Maintenance",
-    href: "/portfolio",
+    href: "/maintenance",
   },
   {
     name: "Gallery",

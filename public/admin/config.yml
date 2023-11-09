@@ -68,6 +68,26 @@ collections:
                   widget: "text",
                 }
 
+      - name: "maintenance" # Used in routes, e.g., /admin/collections/blog
+        label: "Maintenance Page" # Used in the UI
+        file: "src/CMS/maintenance.json"
+        media_folder: "{{media_folder}}/maintenance" # Media files will be stored in the repo under static/images/uploads
+        public_folder: "{{public_folder}}/maintenance" # The src attribute for uploaded media will begin with /images/uploads
+        fields:
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Services Title", name: "servicesTitle", widget: "string" }
+          - label: "Maintenance Services"
+            name: "maintenanceServices"
+            widget: "list"
+            fields:
+              - { label: "Service Icon", name: "serviceIcon", widget: "image" }
+              - { label: "Service Name", name: "serviceName", widget: "string" }
+              - {
+                  label: "Service Description",
+                  name: "serviceDescription",
+                  widget: "text",
+                }
+
       - name: "design&installPage" # Used in routes, e.g., /admin/collections/blog
         label: "Design&Install Page" # Used in the UI
         file: "src/CMS/design&installPage.json"

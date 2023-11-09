@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import MaintenanceImg from "../assets/Maintenance.jpg";
+
+import ShortTitle from "@/components/ShortTitle.astro";
+import LongTitle from "@/components/LongTitle.astro";
+import NavigateButton from "../components/NavigateButton.astro";
+import ServicesAcc from "../components/ServicesAcc";
+
+import jsonCMS from "../CMS/maintenance.json";
+const data = JSON.parse(JSON.stringify(jsonCMS));
+
+const media = await Astro.glob("../CMS/src/media/hard/*");
+const combo = data.maintenanceServices.map((item) => {
+  let imagey = "";
+  media.forEach((image) => {
+    if (
+      image.default.src.includes(item.serviceIcon.split("/")[3].split(".")[0])
+    ) {
+      imagey = image.default.src;
+    }
+  });
+  return { ...item, image: imagey };
+});
+---
+
+<style>
+  .pavement {
+    border-radius: 54% 46% 36% 64% / 61% 30% 70% 39%;
+  }
+  .pavement:hover {
+    border-radius: 27% 73% 48% 52% / 57% 45% 55% 43%;
+  }
+</style>
+
+<Layout title="McDermott Landscaping | Maintenance">
+  <main
+    class="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-4 2xl:max-w-7xl"
+  >
+    <section
+      class="mt-10 flex min-h-screen flex-col items-center justify-center gap-10 lg:mt-0 lg:flex-row lg:gap-20"
+    >
+      <div
+        class="flex flex-col items-center justify-center gap-5 lg:items-start"
+      >
+        <h1
+          class="text-center text-4xl font-bold text-green-800 xs:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+        >
+          Maintenance
+        </h1>
+        <p class="hidden max-w-xl text-xl font-medium lg:block">
+          {data.description}
+        </p>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <Image
+          src={MaintenanceImg}
+          alt="pavement"
+          loading="eager"
+          class="pavement w-[80%] max-w-[400px] duration-300 lg:max-w-sm xl:max-w-md 2xl:max-w-xl"
+        />
+      </div>
+      <p class="max-w-lg text-center text-lg font-medium sm:text-xl lg:hidden">
+        {data.description}
+      </p>
+    </section>
+    <section class="flex w-full flex-col justify-start gap-20">
+      <div class="flex flex-col items-center justify-center">
+        <ShortTitle>Services</ShortTitle>
+        <LongTitle>{data.servicesTitle}</LongTitle>
+      </div>
+      <ServicesAcc services={combo} client:load />
+    </section>
+    <section
+      class="mt-24 flex flex-col items-center justify-center gap-5 xl:mt-32"
+    >
+      <LongTitle>Interested in working with us?</LongTitle>
+      <NavigateButton link="/contactform">Give us a message</NavigateButton>
+    </section>
+  </main>
+</Layout>
