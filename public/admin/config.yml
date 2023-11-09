@@ -116,3 +116,22 @@ collections:
               widget: "text",
               optional: true,
             }
+
+      - name: "footerCompanyInfo" # Used in routes, e.g., /admin/collections/blog
+        label: "Footer Company Informations" # Used in the UI
+        file: "src/CMS/footerCompanyInfo.json"
+        fields:
+          - { label: "Phone Number", name: "phoneNumber", widget: "number" }
+          - { label: "Valid Email", name: "validEmail", widget: "string" }
+          - { label: "Real Location", name: "realLocation", widget: "string" }
+          - { label: "Work Program", name: "workProgram", widget: "string" }
+          - {
+              label: "Link for the Facebook profile",
+              name: "facebookProfile",
+              widget: "string",
+            }
+          - {
+              label: "Link for the LinkedIn profile",
+              name: "linkedInProfile",
+              widget: "string",
+            }
