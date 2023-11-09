@@ -1,4 +1,4 @@
-<!-- ---
+---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
@@ -12,7 +12,7 @@ import ServicesAcc from "../components/ServicesAcc";
 import jsonCMS from "../CMS/maintenance.json";
 const data = JSON.parse(JSON.stringify(jsonCMS));
 
-const media = await Astro.glob("../CMS/src/media/hard/*");
+const media = await Astro.glob("../CMS/src/media/maintenance/*");
 const combo = data.maintenanceServices.map((item) => {
   let imagey = "";
   media.forEach((image) => {
@@ -81,4 +81,4 @@ const combo = data.maintenanceServices.map((item) => {
       <NavigateButton link="/contactform">Give us a message</NavigateButton>
     </section>
   </main>
-</Layout> -->
+</Layout>
