@@ -12,23 +12,24 @@ import facebookIco from "../assets/facebook.svg";
 import linkedinIco from "../assets/linkedin.svg";
 
 import jsonCMS from "../CMS/footerCompanyInfo.json";
+const data = JSON.parse(JSON.stringify(jsonCMS));
 
 const info = [
   {
     icon: telIco,
-    text: "086 816 8479",
+    text: data.phoneNumber,
   },
   {
     icon: emailIco,
-    text: "connor@mcdermottlandscaping.ie",
+    text: data.validEmail,
   },
   {
     icon: locationIco,
-    text: "Kinnegad Co. Westmeath",
+    text: data.realLocation,
   },
   {
     icon: calendarIco,
-    text: "Mon - Fri: 8:00 - 18:00",
+    text: data.workProgram,
   },
 ];
 
@@ -36,12 +37,12 @@ const socials = [
   {
     icon: facebookIco,
     text: "Facebook",
-    link: "https://www.facebook.com/mcdermottlandscaping/",
+    link: data.facebookProfile,
   },
   {
     icon: linkedinIco,
     text: "LinkedIn",
-    link: "https://www.linkedin.com/in/connor-mc-dermott-1b6b9066/?originalSubdomain=ie",
+    link: data.linkedInProfile,
   },
 ];
 ---
